@@ -44,7 +44,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/resume_general.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-1.5 border border-[#38bdf8] text-[#38bdf8] text-sm rounded hover:bg-[#38bdf8]/10 transition-colors duration-200"
@@ -75,7 +75,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/resume_general.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#38bdf8] text-sm"
