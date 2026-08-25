@@ -36,37 +36,42 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-[#38bdf8] text-sm font-mono mb-4 tracking-widest uppercase"
+          className="text-[#38bdf8] text-xs sm:text-sm font-mono mb-5 tracking-widest uppercase"
         >
-          Hi, I&apos;m
+          Data Analyst · Data Engineer · Data Scientist
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight"
+          className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.05]"
         >
-          Shawn Lin
+          Turning messy data into
+          <br className="hidden sm:block" />{" "}
+          <span className="bg-gradient-to-r from-[#38bdf8] to-[#818cf8] bg-clip-text text-transparent">
+            decisions people act on
+          </span>
         </motion.h1>
 
-        <motion.h2
+        <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl font-medium text-[#8b949e] mb-8"
+          className="text-[#8b949e] text-base md:text-lg max-w-2xl mx-auto mb-4 leading-relaxed"
         >
-          Data Analyst · Data Engineer · Data Scientist
-        </motion.h2>
+          I build end-to-end pipelines, train predictive models, and ship the
+          dashboards and agents that put the answer in front of the person making
+          the call — from a TSMC security pipeline to a real-time Kafka stack.
+        </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-[#8b949e] text-base md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-[#8b949e] text-sm mb-12"
         >
-          MSBA candidate at Boston University. I build end-to-end data pipelines,
-          train predictive models, and transform raw datasets into decisions that matter.
+          Ching-Hsuan &ldquo;Shawn&rdquo; Lin · MSBA candidate, Boston University
         </motion.p>
 
         <motion.div

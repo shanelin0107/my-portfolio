@@ -67,6 +67,11 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           />
         )}
 
+        {/* Tint — keeps light dashboards/diagrams from glaring against the dark theme; lifts on hover */}
+        {hasMedia && (
+          <div className="absolute inset-0 bg-[#0d1117]/45 group-hover:bg-[#0d1117]/10 transition-colors duration-500 pointer-events-none" />
+        )}
+
         {/* Placeholder — shown only when neither image nor video is set */}
         {!hasMedia && (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -102,9 +107,16 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       {/* Card body */}
       <div className="p-5 flex flex-col flex-1">
         <div className="flex items-start justify-between mb-3">
-          <span className="px-2.5 py-1 bg-[#38bdf8]/10 text-[#38bdf8] text-xs rounded-full border border-[#38bdf8]/20">
-            {project.category}
-          </span>
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="px-2.5 py-1 bg-[#38bdf8]/10 text-[#38bdf8] text-xs rounded-full border border-[#38bdf8]/20">
+              {project.category}
+            </span>
+            {project.featured && (
+              <span className="px-2.5 py-1 bg-[#818cf8]/10 text-[#818cf8] text-xs rounded-full border border-[#818cf8]/20">
+                Featured
+              </span>
+            )}
+          </div>
           <a
             href={project.github}
             target="_blank"
@@ -135,14 +147,27 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           ))}
         </div>
 
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-[#38bdf8] text-sm hover:gap-2.5 transition-all duration-200 mt-auto"
-        >
-          View on GitHub <ExternalLink size={12} />
-        </a>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-auto">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-[#38bdf8] text-sm hover:gap-2.5 transition-all duration-200"
+          >
+            View on GitHub <ExternalLink size={12} />
+          </a>
+
+          {project.demo && (
+            <a
+              href={project.demo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[#818cf8] text-sm hover:gap-2.5 transition-all duration-200"
+            >
+              {project.demo.label} <ExternalLink size={12} />
+            </a>
+          )}
+        </div>
       </div>
     </motion.div>
   );
@@ -164,7 +189,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-[#38bdf8] text-sm font-mono mb-2 tracking-widest">04. projects</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Featured Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Things I&apos;ve Built</h2>
+          <p className="text-[#8b949e] text-sm mb-8">
+            {projects.length} projects across ML, analytics, and data engineering — every one of them shipped end to end.
+          </p>
         </motion.div>
 
         <motion.div

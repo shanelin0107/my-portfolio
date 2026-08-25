@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "6+", label: "ML Projects" },
+  { value: "15", label: "Shipped Projects" },
   { value: "3", label: "Cloud Platforms" },
   { value: "8 yrs", label: "Volleyball" },
 ];
@@ -37,8 +37,9 @@ export default function About() {
             </p>
             <p>
               At <span className="text-[#e6edf3]">TSMC</span>, I developed an LLM-based cybersecurity
-              tool to detect unregistered SaaS applications, eliminating approximately{" "}
-              <span className="text-[#38bdf8] font-medium">200 business days</span> of manual review effort.
+              tool that classified 8,600+ internal endpoints to surface unregistered SaaS
+              applications — work that would have taken{" "}
+              <span className="text-[#38bdf8] font-medium">~280 business days</span> to review by hand.
               That experience shaped how I think about AI: it should solve real operational problems at scale.
             </p>
             <p>
