@@ -32,19 +32,18 @@ export default function About() {
             <p>
               I&apos;m a data analyst and data engineer currently pursuing my{" "}
               <span className="text-[#e6edf3]">Master of Science in Business Analytics at Boston University</span>.
-              My work sits at the intersection of engineering and insight — I care about
-              building systems that actually work, not just demos.
+              My work sits at the intersection of engineering and insight. I care about
+              building systems that hold up once real data runs through them.
             </p>
             <p>
-              At <span className="text-[#e6edf3]">TSMC</span>, I developed an LLM-based cybersecurity
-              tool that classified 8,600+ internal endpoints to surface unregistered SaaS
-              applications — work that would have taken{" "}
-              <span className="text-[#38bdf8] font-medium">~280 business days</span> to review by hand.
-              That experience shaped how I think about AI: it should solve real operational problems at scale.
+              At <span className="text-[#e6edf3]">TSMC</span>, I designed a Python workflow that used
+              an LLM to classify 8,600+ compliance records, saving roughly{" "}
+              <span className="text-[#38bdf8] font-medium">280 business days</span> of manual processing.
+              That project shaped how I think about AI. It should solve real operational problems at scale.
             </p>
             <p>
-              Outside of data, I&apos;ve spent 8 years competing in volleyball — including captaining
-              a team. The sport taught me how to read patterns under pressure and lead when it counts.
+              Outside of data, I&apos;ve spent 8 years competing in volleyball, including captaining
+              a team. The sport taught me how to read patterns under pressure.
             </p>
           </motion.div>
 

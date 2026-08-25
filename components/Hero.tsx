@@ -60,9 +60,10 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-[#8b949e] text-base md:text-lg max-w-2xl mx-auto mb-4 leading-relaxed"
         >
-          I build end-to-end pipelines, train predictive models, and ship the
-          dashboards and agents that put the answer in front of the person making
-          the call — from a TSMC security pipeline to a real-time Kafka stack.
+          I build data pipelines, train predictive models, and turn the results
+          into dashboards and tools that people use at work. Recent projects
+          include an LLM classification workflow at TSMC and a real-time Kafka
+          stack.
         </motion.p>
 
         <motion.p
